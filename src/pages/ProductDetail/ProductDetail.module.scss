@@ -1,0 +1,151 @@
+.btn_back {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    margin-left: 186px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: #ccc;
+    }
+}
+
+.container {
+    max-width: 1120px;
+    display: flex;
+    gap: 35px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #fff;
+
+    .product_image {
+        flex: 2;
+        img {
+            width: 100%;
+        }
+    }
+
+    .product_info {
+        flex: 3;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .title {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .product_rating {
+            .rating {
+                font-size: 1.6rem;
+                text-decoration: underline;
+                font-weight: 400;
+            }
+
+            .rating_stars {
+                margin-left: 3px;
+                flex: 0 0 auto;
+                position: relative;
+                display: inline-block;
+                width: auto;
+                margin-top: 8px;
+                font-size: 2rem;
+                color: #ccc;
+
+                .rating_filled {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
+                    color: gold; /* màu sao vàng */
+                    white-space: nowrap;
+                    font-size: 2rem;
+                }
+            }
+
+            .line,
+            .stock {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            .line {
+                padding: 0 4px;
+            }
+        }
+        .product_meta {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 1.4rem;
+            margin-top: 12px;
+        }
+
+        .price {
+            margin-top: 12px;
+            .price_discounted {
+                font-weight: 600;
+                font-size: 2.5rem;
+                color: red;
+            }
+
+            .price_origin {
+                margin-left: 8px;
+                font-size: 1.8rem;
+                font-weight: 500;
+                text-decoration: line-through;
+                opacity: 0.7;
+            }
+        }
+
+        .description {
+            margin-top: 20px;
+            background-color: #fdf6e3; /* nền vàng nhạt */
+            padding: 12px;
+            border-radius: 6px;
+            line-height: 1.5;
+            font-size: 1.4rem;
+        }
+
+        .btns {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+
+            button {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            .addToCard_btn {
+                display: flex;
+
+                padding: 15px 30px;
+                background-color: rgba(255, 87, 34, 0.1);
+                border: 1px solid #ee4d2d;
+                color: #ee4d2d;
+                outline: none;
+                transition: all ease 0.3s;
+
+                &:hover {
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+            .buy_btn {
+                padding: 16px 50px;
+                background-color: #ee4d2d;
+                border: none;
+                color: #fff;
+
+                &:hover {
+                    background-color: #ea583a;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

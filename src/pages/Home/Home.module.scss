@@ -1,0 +1,25 @@
+.container {
+    text-align: center;
+    height: 90vh;
+
+    .btn {
+        margin: 100px;
+        border: none;
+        padding: 14px 24px;
+        background: #fff;
+        border-radius: 6px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: background-color ease 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            background: linear-gradient(
+                90deg,
+                rgba(61, 149, 184, 1) 0%,
+                rgba(87, 199, 133, 1) 50%,
+                rgba(237, 221, 83, 1) 94%
+            );
+        }
+    }
+}

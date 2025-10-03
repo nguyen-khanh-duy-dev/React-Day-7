@@ -1,0 +1,130 @@
+.container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 18px;
+    box-shadow: 0px 6px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform ease 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+
+    .linkOverlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .skeletonThumb {
+        width: 100%;
+        height: 250px; // đặt đúng với kích thước ảnh thật của bạn
+        background: #ccc;
+        background-size: 200% 100%;
+        border-radius: 8px;
+    }
+
+    .discount {
+        position: absolute;
+        top: 10px;
+        left: 14px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 6px 8px;
+        color: #fff;
+        background-color: #d8001a;
+        border-radius: 8px;
+        letter-spacing: 1px;
+    }
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+
+    .headerCard {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.5;
+            min-height: calc(2 * 26px);
+        }
+    }
+
+    .priceProduct {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        .priceDiscount {
+            font-size: 2rem;
+            font-weight: 600;
+            color: rgb(255, 22, 22);
+        }
+
+        .price {
+            text-decoration: line-through;
+            font-size: 1.3rem;
+            font-weight: 500;
+            opacity: 0.4;
+        }
+    }
+    .subInfo {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+
+        .brand,
+        .dot,
+        .category {
+            font-size: 1.2rem;
+        }
+    }
+
+    .footerCard {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .rating {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            gap: 4px;
+        }
+
+        .btn {
+            position: relative;
+            z-index: 2;
+            outline: none;
+            padding: 6px 24px;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            background-color: #1976d2;
+            color: #fff;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

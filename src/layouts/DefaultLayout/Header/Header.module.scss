@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 64px;
+    box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.1);
+
+    .heading {
+        font-size: 2.8rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .search_input {
+        position: relative;
+        flex-basis: 30%;
+
+        input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .icon_btn {
+            position: absolute;
+            right: -18px;
+            top: 5px;
+            border: none;
+            background: transparent;
+            font-size: 1.8rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .user_action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .user {
+            font-size: 2.5rem;
+        }
+    }
+}

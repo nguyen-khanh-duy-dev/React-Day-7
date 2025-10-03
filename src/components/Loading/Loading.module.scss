@@ -1,0 +1,25 @@
+.container {
+    position: fixed;
+    inset: 0;
+    background-color: #000000;
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 5px solid;
+        border-color: #ccc transparent;
+        animation: spinner 1s ease infinite;
+    }
+}
+
+@keyframes spinner {
+    to {
+        rotate: 360deg;
+    }
+}
