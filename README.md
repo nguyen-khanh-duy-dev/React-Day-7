@@ -1,12 +1,13 @@
-# React + Vite
+# React Day 41: Xây dựng E-commerce App với Redux Architecture Pattern
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Sửa bài
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Chưa sử dụng biến môi trường .env trong http => Cách dùng: import.meta.env.VITE_BASE_URL ✅
+2. Chưa kiểm tra mode/NODE_ENV để quyết định có bật logger hay không ✅
+    - Gợi ý: Có thể sử dụng import.meta.env.MODE/import.meta.env.NODE_ENV, nếu nó mang giá trị là "development" thì thêm logger
+3. Loại bỏ các console.log không cần thiết ✅
+4. Chú ý ngữ pháp khi sử dụng biến, tên hàm cho đúng mục đích. VD: useProduct => useProducts vì hook lấy ra danh sách products ✅
+5. Chưa xử lý lỗi khi có thao tác bất đồng bộ với API ✅
+6. Thêm dispatch loading khi gọi dữ liệu ✅
+7. Sử dụng navigate(-1) giúp quay lại trang trước, và có thể sử dụng nút forward ở trình duyệt để quay lại trang sau ✅
+    - Còn sử dụng navigate('/products') thì nút forward sẽ ko thể quay lại trang sau

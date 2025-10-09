@@ -26,7 +26,7 @@ function ProductDetail() {
         <>
             <button
                 onClick={() => {
-                    navigate("/products")
+                    navigate(-1)
                 }}
                 className={styles.btn_back}
             >

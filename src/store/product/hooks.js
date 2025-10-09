@@ -3,7 +3,7 @@
 import { useSelector } from "react-redux"
 import { getDetail, getList } from "./selectors"
 
-export const useProduct = () => {
+export const useProducts = () => {
     const products = useSelector(getList)
     return products
 }

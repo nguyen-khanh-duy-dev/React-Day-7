@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 
 import styles from "./ProductList.module.scss"
+import { hooks as loadingHooks } from "@/store/ui"
 import {
     actions as productActions,
     hooks as productHooks,
@@ -11,13 +12,17 @@ import Loading from "@/components/Loading"
 
 function ProductList() {
     const dispatch = useDispatch()
-    const products = productHooks.useProduct()
+    const products = productHooks.useProducts()
+    const isLoading = loadingHooks.useLoading()
 
     useEffect(() => {
         dispatch(productActions.getList())
     }, [dispatch])
 
-    if (!products) return
+    if (isLoading) {
+        return <Loading />
+    }
+
     return (
         <div className={styles.container}>
             {products.map((product) => (
@@ -25,7 +30,6 @@ function ProductList() {
                     <ProductCard product={product} />
                 </div>
             ))}
-
         </div>
     )
 }
