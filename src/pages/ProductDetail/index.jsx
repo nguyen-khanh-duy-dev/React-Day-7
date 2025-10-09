@@ -2,16 +2,19 @@ import { useDispatch } from "react-redux"
 import { useNavigate, useParams } from "react-router"
 import { BsCartPlus } from "react-icons/bs"
 
+import { hooks as loadingHooks } from "@/store/ui"
 import styles from "./ProductDetail.module.scss"
 import {
     actions as productDetailActions,
     hooks as productDetailHooks,
 } from "@/store/product"
 import { useEffect } from "react"
+import Loading from "@/components/Loading"
 
 function ProductDetail() {
     const navigate = useNavigate()
     const slugParam = useParams()
+    const isLoading = loadingHooks.useLoading()
 
     const dispatch = useDispatch()
     const productDetail = productDetailHooks.useProductDetail()
@@ -19,6 +22,10 @@ function ProductDetail() {
     useEffect(() => {
         dispatch(productDetailActions.getDetail(slugParam.slug))
     }, [slugParam.slug, dispatch])
+
+    if (isLoading) {
+        return <Loading />
+    }
 
     if (!productDetail) return
 

@@ -23,6 +23,10 @@ function ProductList() {
         return <Loading />
     }
 
+    if (!products) {
+        return
+    }
+
     return (
         <div className={styles.container}>
             {products.map((product) => (
